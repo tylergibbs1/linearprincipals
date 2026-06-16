@@ -1,0 +1,11 @@
+{
+  "name": "linearprincipals",
+  "description": "Linear's UI/UX and product philosophy as an Agent Skill — applies how Linear designs interfaces and makes product decisions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tyler Gibbs"
+  },
+  "skills": [
+    "./skills/linear-design-principles"
+  ]
+}
