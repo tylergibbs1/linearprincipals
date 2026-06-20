@@ -23,6 +23,8 @@ The blog posts in `ui-ux-craft.md` are the output. This is the input: the org st
 - Product team split by **region** (US / Europe) to handle time zones, not by product area.
 - Karri Saarinen's reasoning (Figma "10 rules"): the PM-decides → designer-visualizes → engineer-builds pipeline creates silos. At Linear there is no "handoff to dev," and quality improves when everyone understands how designs are implemented and shares responsibility. "You're never off the hook."
 
+> **2026 update — the no-handoffs idea, extended to agents.** Linear's "Issue tracking is dead" (linear.app/next, Mar 2026) generalizes this: handoffs existed because engineering time was scarce, but they're lossy overhead. As agents take procedural work, the relay to eliminate now includes human→agent, so the system's job is to make **shared context** (decisions, "why," code) legible to humans and agents alike. The small-connected-team model is the precursor, not a contradiction — see SKILL.md principle 11.
+
 ## Decisions: taste, not experiments
 
 - **No OKRs.** Goals are loose strategic themes like "be the default tool for startups."

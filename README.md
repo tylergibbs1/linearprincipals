@@ -4,22 +4,32 @@ How Linear thinks about UI, UX, and product — design as judgment, not decorati
 
 ## Install
 
+**Skills CLI:**
+
 ```
 npx skills add tylergibbs1/linearprincipals
 ```
 
-Or clone directly into your skills directory:
+**Claude Code plugin (`/plugin`):**
 
 ```
-git clone https://github.com/tylergibbs1/linearprincipals.git \
-  ~/.claude/skills/linearprincipals
+/plugin marketplace add tylergibbs1/linearprincipals
+/plugin install linearprincipals@linearprincipals
+```
+
+**Manual:** clone anywhere, then copy (or symlink) the skill directory so `SKILL.md` lands directly under a skills folder — Claude Code scans `~/.claude/skills/<name>/SKILL.md`, so the inner `skills/linear-design-principles` directory must be the skill root, not the repo root:
+
+```
+git clone https://github.com/tylergibbs1/linearprincipals.git
+ln -s "$PWD/linearprincipals/skills/linear-design-principles" \
+  ~/.claude/skills/linear-design-principles
 ```
 
 ## Skills
 
 ### [linear-design-principles](skills/linear-design-principles/SKILL.md)
 
-**Design and review like Linear.** Ten core principles — opinionated defaults, calm-but-dense hierarchy, speed as architecture, quality as a trained habit — plus a copy-paste review checklist, the operating model behind them, and references to the source material.
+**Design and review like Linear.** Eleven core principles — opinionated defaults, calm-but-dense hierarchy, speed as architecture, quality as a trained habit, and designing for shared context in the agent era — plus a copy-paste review checklist, the operating model behind them, and references to the source material.
 
 | You'll learn | From |
 |---|---|
@@ -31,7 +41,12 @@ git clone https://github.com/tylergibbs1/linearprincipals.git \
 | Build the workbench, not the chatbox, for AI features | "Design for the AI age" |
 | Interpret requests, don't transcribe them | "Building what customers need" |
 | Redesign strategy and paying down design debt | "A design reset" + "How we redesigned the Linear UI" |
+| Design for shared context, not handoffs, in the agent era | "Issue tracking is dead" + "Reviewing code in the agent era" |
 | No handoffs, taste over experiments, the Linear Method | Lenny's Newsletter Q&A + linear.app/method |
+
+### How this differs from visual-craft skills
+
+This skill is about **product judgment — deciding what to build and whether the problem is real** — not pixel-level execution. It pairs with, rather than replaces, visual-craft and implementation skills: use this one to decide what should exist and why, then a craft skill to execute the CSS, animation, and component work. If your question is "is this the right problem / the right scope / the right default," this is the skill; if it's "make this button feel better," reach for a craft skill.
 
 ## Usage
 
@@ -80,6 +95,8 @@ This skill distills guidance from Linear's own writing and the people who built 
 - [Quality Wednesdays](https://linear.app/now/quality-wednesdays) — Tuomas Artman
 - [Why is quality so rare?](https://linear.app/now/why-is-quality-so-rare) — Karri Saarinen (Config 2025)
 - [Building what customers need](https://linear.app/now/building-what-customers-need) — Linear
+- [Issue tracking is dead](https://linear.app/next) — Linear (2026)
+- [Reviewing code in the agent era](https://linear.app/now/reviewing-code-in-the-agent-era) — Linear (2026)
 - [10 rules for crafting products that stand out](https://www.figma.com/blog/karri-saarinens-10-rules-for-crafting-products-that-stand-out/) — Figma
 - [The Linear Method: opinionated software](https://www.figma.com/blog/the-linear-method-opinionated-software/) — Figma
 - [How Linear builds product](https://www.lennysnewsletter.com/p/how-linear-builds-product) — Lenny's Newsletter

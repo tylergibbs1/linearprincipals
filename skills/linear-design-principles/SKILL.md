@@ -1,8 +1,6 @@
 ---
 name: linear-design-principles
-description: Applies Linear's UI/UX and product philosophy when designing, building, or reviewing interfaces and product decisions. Use when designing UI, critiquing UX, framing a product problem, planning a redesign, deciding scope, reducing visual clutter, designing AI/agent interfaces, debating customization vs. opinionated defaults, or setting up product process. Triggers on "Linear style," "calm interface," "opinionated software," "design for craft," "reduce visual noise," "is this the right problem," "should we add a setting," "feature request vs need," "redesign strategy," "design review process."
-metadata:
-  version: 1.0.0
+description: Applies Linear's UI/UX and product philosophy — design as product judgment, not decoration — when designing, building, or reviewing interfaces and making product decisions. Use when framing a product problem, planning a redesign, deciding scope, reducing visual noise, designing AI/agent interfaces, debating customization vs. opinionated defaults, or setting up product process (handoffs, OKRs, A/B testing, design reviews). Triggers on "Linear style," "calm interface," "opinionated software," "is this the right problem," "should we add a setting," "feature request vs need," "redesign strategy," "should we set OKRs," "do we need A/B testing," "design-to-engineering handoff." Not for replicating the Linear visual aesthetic (dark mode, gradients, minimalist landing pages) — this is about product method, not the look.
 ---
 
 # Linear Design Principles
@@ -23,6 +21,9 @@ Reach for these principles when the task is one of:
 - **Deciding process, org, or how decisions get made** → `references/operating-model.md`.
 - **Citing or sourcing a claim** → `references/sources.md`.
 
+> [!note] Scope
+> This is about **product judgment — what to build and whether the problem is real** — not pixel-level execution. Pair it with a visual-craft/implementation skill: use this to decide what should exist, then a craft skill to execute. The interaction guidance here is **desktop- and keyboard-first** (command palette, dense lists, keyboard as primary input); defer touch/responsive/small-screen work to skills built for that. Linear hasn't published a mobile design philosophy, so don't invent one.
+
 ---
 
 ## The core principles
@@ -34,16 +35,18 @@ You cannot build something excellent for everyone. Pick a specific user and a sp
 - A product needs a clear value proposition to win trust. Generic = invisible.
 - Be most opinionated at the **atomic level** (what properties an issue has), more flexible at **broad containers** (how projects are structured), because every company is shaped differently.
 
-### 2. One really good way beats infinite flexibility.
+### 2. Ship one really good way, not infinite flexibility.
 
 Ship strong defaults that guide users toward a good workflow. Flexible software lets everyone invent their own process, which becomes chaos as teams scale.
 
-- **Refuse requests that protect managers at the expense of daily IC workflow** (e.g., required fields, multiple assignees). Reinterpreting a request is not enough; sometimes the right answer is "no."
+- Sometimes the opinionated answer is **"no."** Refuse whole categories of requests that protect managers at the expense of the daily IC workflow (e.g., required fields, multiple assignees) — saying no is a feature of an opinionated tool, not a failure to satisfy it. (Interpreting the underlying need is principle 10; this is the case where, even interpreted, the right call is still to decline.)
 - Default to "simple first, then powerful": simple to start, more capable as you scale.
 
 ### 3. Use plain language. No invented jargon.
 
 Vocabulary is a design surface. Use universal units (issues, projects, teams) so nobody needs a handbook. Don't invent terms — they mean different things to different people. Write issues, not "As a user, I want…" user stories that hide the actual need.
+
+- Extend this to **all words on screen**, not just object names: button labels, error messages, empty-state copy, and notification voice are part of the calm. Aim for terse, human, jargon-free microcopy. (Linear has no dedicated essay on voice; treat the specific tone calls as inference from the product, not a sourced rule.)
 
 ### 4. Understand the problem before drawing the screen.
 
@@ -62,6 +65,8 @@ Dense interfaces can still feel calm if hierarchy is sharp. Don't let every elem
 - Borders, icons, backgrounds, and separators must **earn their existence**. If they don't clarify a relationship, they're clutter.
 - "Structure should be felt, not seen." If most people don't consciously notice a refinement, that's a good sign.
 - Test against **real app states** (full lists, empty states, long text), not isolated Dribbble-style mockups. Stress-test across browser/desktop, light/dark/custom themes, and edge cases.
+- Treat **theming as a system**: derive themes from a few perceptual parameters (base color, accent, contrast in a perceptually-uniform space like LCH) plus a baked-in accessibility contrast variable — not by hand-tuning dozens of independent color values.
+- For **data views and dashboards**, give every view a clear purpose and owner, and pair every metric with comparison, history, or a threshold — a raw number with no context is usually noise. (More in `references/ui-ux-craft.md`.)
 
 ### 6. Speed is architecture and input design, not polish.
 
@@ -70,7 +75,7 @@ Dense interfaces can still feel calm if hierarchy is sharp. Don't let every elem
 - Treat **latency as a UX bug**. Aim for instant (optimistic local writes, local-first data) before adding features. Eliminate spinners by having nothing to wait for.
 - Speed is also an **input-model problem**: a fast backend still loses if the fastest path to an action needs a mouse and three menus. Make keyboard a primary input; a command palette should search the local object pool, not a server.
 
-### 7. Quality is a trained habit and a hiring filter, not a final pass.
+### 7. Treat quality as a trained habit and a hiring filter, not a final pass.
 
 Craft is deliberate attention paid because it matters to the maker, not because someone is checking. It compounds through many small decisions.
 
@@ -83,15 +88,27 @@ Craft is deliberate attention paid because it matters to the maker, not because 
 Generic chat is a weak, imprecise form for most workflows. Design structured surfaces ("workbenches") where AI operates inside clear context.
 
 - Design the **review, approval, context, and control** surfaces, not just the prompt box.
-- For agentic work: keep a human accountable. Surface the agent's reasoning, tool calls, and elicitations; keep humans in the loop on output. Unbounded AI is powerful but directionless.
+- **Embed agents where the work already lives** — inside the issue, the triage queue, the review — not in a bolted-on chat panel. Let work auto-start from existing signals (e.g., triage) instead of requiring someone to open a separate tool.
+- Make agent sessions **shared and observable**: anyone on the team can follow, redirect, or take over a run, rather than it being a private one-off. Surface the agent's reasoning, tool calls, and elicitations.
+- **Keep a human accountable.** The issue stays assigned to a person — "an agent cannot be held accountable." As agents handle correctness and bug-finding, the human's job shifts up to judgment: is the work *useful*, not just correct? Unbounded AI is powerful but directionless.
 
-### 9. Settings are not a design failure.
+### 9. Use settings for preferences, not deferred decisions.
 
 Settings aren't automatically a sign of poor design. Use them for genuine preferences and repeated-use friction — not as a dumping ground for unresolved product decisions. Settings can also teach power users what's possible.
+
+- Decision test: **is there a right default the product should just get right?** If yes, pick it — don't ship a toggle to avoid choosing. If it's genuine taste/habit the product shouldn't hold an opinion on, a setting is appropriate.
 
 ### 10. Build what customers need, not just what they ask for.
 
 Treat requests as **input, not instructions**. Users describe symptoms or name a familiar solution; infer the deeper need. Don't tally feature requests blindly — research is interpretation, not transcription. (Example: users asked for "custom fields" but were really trying to track customer needs → build the purpose-built thing.)
+
+### 11. Design for shared context, not handoffs.
+
+As agents do more of the procedural work (Linear, 2026: coding agents in 75%+ of its enterprise workspaces, agent-completed work up 5x in three months, ~25% of new issues agent-authored), the bottleneck moves from execution to **context**. The job of the system is to capture customer feedback, decisions, strategic direction, and code in one place that both humans and agents can work from — so nothing has to be re-explained at a handoff.
+
+- Linear's original "no handoffs, small connected teams" model is the **precursor** to this, not a contradiction: both eliminate the lossy PM→designer→engineer relay. Now the relay to eliminate also includes the human→agent one.
+- Make the work the source of truth. If a decision or its "why" only lives in a chat thread or someone's head, an agent (and the next human) can't use it.
+- This is *why* plain language (3), opinionated structure (2), and the workbench (8) matter more, not less, in the agent era — shared context only works if the vocabulary and structure are legible to everyone, human or machine.
 
 ---
 
@@ -115,19 +132,22 @@ Linear-style review:
 - [ ] Who specifically is this for? Is it opinionated, or generically for "everyone"?
 - [ ] Is the problem written clearly, in my own words? Is it the real problem or a symptom?
 - [ ] Concept decided before pixels? (What is each entity, really?)
+- [ ] Plain language — universal terms, no invented jargon? Is microcopy (labels, errors, empty states) terse and human?
 - [ ] Does every border/icon/separator earn its place? Does chrome recede?
 - [ ] Tested against real/full/empty states and light/dark/custom themes?
+- [ ] If a data view: clear purpose + owner, and every metric paired with comparison, history, or a threshold?
 - [ ] Any spinner that near-zero latency could remove instead?
 - [ ] Is there a fast keyboard path to the primary action?
-- [ ] Are we adding a setting to dodge a product decision?
+- [ ] Are we adding a setting to dodge a product decision the product should get right by default?
 - [ ] Are we honoring a request literally instead of the underlying need?
 - [ ] If AI: is there a structured workbench with review/approval, not just a chatbox?
+- [ ] If AI/agents: is context (decisions, the "why," code) captured where humans and agents can both use it — nothing re-explained at a handoff?
 ```
 
 ---
 
 ## Reference files
 
-- **`references/ui-ux-craft.md`** — The ten Linear blog posts worth reading (calmer interface, redesign strategy, output isn't design, design is more than code, design for the AI age, quality rituals, settings, customer needs, dashboards), each with its core lessons and link.
+- **`references/ui-ux-craft.md`** — The Linear blog posts worth reading (calmer interface, redesign strategy, output isn't design, design is more than code, design for the AI age, quality rituals, settings, customer needs, dashboards, plus the 2026 agent-era cluster: "issue tracking is dead," code review with Diffs, and teaching agents to do the work), each with its core lessons and link.
 - **`references/operating-model.md`** — How Linear actually operates: org structure, decision-making, opinionated software, speed-as-architecture, the Linear Method, hiring, and planning mechanics.
 - **`references/sources.md`** — Primary sources, interviews/profiles, technical breakdowns, and background, with sourcing caveats.

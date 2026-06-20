@@ -1,0 +1,13 @@
+{
+  "name": "linearprincipals",
+  "owner": {
+    "name": "Tyler Gibbs"
+  },
+  "plugins": [
+    {
+      "name": "linearprincipals",
+      "source": "./",
+      "description": "Linear's UI/UX and product philosophy as an Agent Skill — applies how Linear designs interfaces and makes product decisions."
+    }
+  ]
+}

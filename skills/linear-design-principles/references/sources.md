@@ -15,6 +15,14 @@
 - Building what customers need: https://linear.app/now/building-what-customers-need
 - Dashboards best practices: https://linear.app/now/dashboards-best-practices
 
+### Agent era (2026)
+- Issue tracking is dead / the next system: https://linear.app/next (Mar 24, 2026)
+- Code Intelligence for Linear Agent: https://linear.app/now/code-intelligence-for-linear-agent (May 14, 2026)
+- Code review should be fast: https://linear.app/now/code-review-should-be-fast (May 28, 2026)
+- Reviewing code in the agent era: https://linear.app/now/reviewing-code-in-the-agent-era (Jun 10, 2026)
+- Now Linear writes the code, too (Coding Sessions): https://linear.app/now/coding-sessions-for-linear-agent (Jun 11, 2026)
+- Teaching an agent to auto-fix bugs: https://linear.app/now/linear-agent-bug-fix (Jun 12, 2026)
+
 ## Interviews and profiles
 - *How Linear builds product*, Lenny's Newsletter Q&A with Karri Saarinen, Sep 2023 (org structure, no OKRs, no A/B tests, work trials; partially paywalled): https://www.lennysnewsletter.com/p/how-linear-builds-product
 - *Inside Linear: building with taste, craft, and focus*, Lenny's Podcast with Karri Saarinen: https://www.lennysnewsletter.com/p/inside-linear-building-with-taste
@@ -34,6 +42,7 @@
 
 ## Sourcing caveats
 - Much of the strongest material is **first-party** (Linear's own blog and founder talks): candid but self-promotional. Claims like "quality drives growth" are framed by Linear as causal but not independently audited.
+- The **2026 agent-era posts** (linear.app/next and the Diffs / Coding Sessions / bug-fix cluster) are product-launch announcements as much as essays. Adoption stats (75%+ of enterprise workspaces, 5x growth, ~25% agent-authored issues) are Linear's own and point-in-time; treat the underlying principles (context over handoffs, code-is-useful-not-just-correct, human accountability) as the durable part and the feature names/numbers as a snapshot.
 - **Sync-engine internals** (conflict resolution, CRDT vs. OT) are partly reverse-engineered by third parties; some specifics are inferred from talks. The "<50ms" page-load figure is third-party measurement, not an official benchmark.
 - The Figma "10 rules" article uses "differentiator," "people pay attention," "win a market" — not "compounding." Treat any compounding framing as interpretation.
 - Critics note the opinionated model fits software product teams better than teams needing deep customization; the "Project" abstraction is contested. These are legitimate limitations, not universal truths.

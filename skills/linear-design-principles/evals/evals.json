@@ -35,14 +35,14 @@
         "Invokes 'output isn't design' — polished form does not mean solved problem or good fit",
         "Asks whether the underlying problem and forces (user needs, constraints, edge cases, workflows) were defined first",
         "Recommends using AI for exploration/prototyping while keeping human judgment on problem framing and fit",
-        "May reference 'settings are not a design failure' — settings for genuine preferences, not to dodge product decisions",
+        "Bonus (not required): references 'settings are not a design failure' — settings for genuine preferences, not to dodge product decisions",
         "Advises validating against real app states rather than an isolated mockup",
         "Does NOT treat visual polish as sufficient evidence of quality"
       ]
     },
     {
       "skills": ["linear-design-principles"],
-      "query": "We want our app to feel as fast and effortless as Linear. We're planning to add nicer loading skeletons and spinner animations. Good plan?",
+      "query": "We want our app to feel instant and effortless. We're planning to add nicer loading skeletons and spinner animations. Good plan?",
       "files": [],
       "expected_behavior": [
         "Reframes: 'calm, dense, fast' is architecture and input design, not polish — skeletons/spinners add noise",
@@ -63,7 +63,7 @@
         "Advises keeping the user's mental model stable and cutting high-risk scope (e.g., navigation changes) when risk is too high",
         "Recommends design + engineering working together daily, no handoff",
         "Suggests north-star/concept prototypes, stress-testing across environments and themes, and phased rollout (private beta then percentage rollout)",
-        "Mentions getting leadership backing and that the product experience is holistic/visual unlike incremental engineering"
+        "Mentions getting leadership backing for a holistic sweep rather than per-screen patching"
       ]
     },
     {
@@ -103,6 +103,66 @@
         "Separates problem design, conceptual solution, and execution — settle concepts before UI details",
         "Asks diagnostic questions (is this real? what if we don't do it? who defined it?)",
         "Does NOT jump straight to more mockups or visual iteration"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "Two teams disagree on whether comments should show newest-first or oldest-first, so we're about to add a sort toggle in settings. Right call?",
+      "files": [],
+      "expected_behavior": [
+        "Distinguishes a genuine recurring preference from punting a product decision into a toggle",
+        "Asks whether one ordering is actually better for the core reading/replying workflow, and recommends picking that default first",
+        "Notes settings aren't automatically a failure and can teach power users what's possible",
+        "Warns against settings becoming a dumping ground for unresolved decisions",
+        "Does NOT reflexively add the toggle, nor reflexively forbid all settings"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "We're renaming 'tasks' to 'Sparks' and 'projects' to 'Constellations' to give the product a distinctive brand identity. Good idea?",
+      "files": [],
+      "expected_behavior": [
+        "Invokes vocabulary as a design surface and the cost of invented jargon (users need a handbook)",
+        "Argues for universal, plain terms so nobody has to learn a private language",
+        "Asks what the rename clarifies for the user — distinctiveness alone isn't a reason",
+        "Notes invented terms mean different things to different people",
+        "Does NOT endorse renaming core objects for novelty or branding"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "Our bug backlog has 1,400 open issues and keeps growing. We triage quarterly and only assign polish/UI bugs to the design team. How should we handle quality?",
+      "files": [],
+      "expected_behavior": [
+        "Recommends a strict bug SLA and no permanent backlog (fix fast or it never gets fixed)",
+        "Frames quality as everyone's job, not just the design team's",
+        "Suggests a recurring quality ritual and group UI review (different people catch different defects)",
+        "Treats papercuts as real, scheduled work",
+        "Locates quality in hiring and no-handoff ownership, not in adding a separate QA gate",
+        "Does NOT endorse a permanent quarterly-triaged backlog as acceptable"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "We're positioning the product as a flexible platform for any team, configurable to fit each company's process. Is that a strong strategy?",
+      "files": [],
+      "expected_behavior": [
+        "Warns that generic 'for everyone / configurable to anything' positioning tends to be invisible",
+        "Recommends picking a specific user and use case and optimizing hard for it",
+        "Frames restraint and opinionation as the strategy, not a limitation",
+        "May note being most opinionated at the atomic level while taking more cues at broad container levels (optional)",
+        "Does NOT affirm maximal flexibility as the path to winning trust"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "I have an approved Figma spec for our new settings page. Implement it in React with Tailwind, matching the spec exactly, and fix the flexbox overflow on the right panel.",
+      "files": [],
+      "expected_behavior": [
+        "Does NOT drive the answer with Linear product-philosophy framing — the problem and design are already settled",
+        "Treats this as pixel/implementation execution that a frontend craft/implementation skill should own",
+        "At most offers a light pointer (e.g. test against real/empty states) without re-litigating the product decision",
+        "Does NOT re-open problem framing, opinionation, or 'is this the right problem' for an approved spec"
       ]
     }
   ]

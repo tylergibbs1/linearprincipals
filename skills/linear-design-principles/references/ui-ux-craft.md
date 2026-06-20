@@ -13,6 +13,9 @@ Linear's blog is the **Now** section (`linear.app/now`). The useful categories f
 - 8. Settings are not a design failure
 - 9. Building what customers need, not just what they ask for
 - 10. Best practices for designing Linear Dashboards
+- 11. The agent era: "Issue tracking is dead" (2026)
+- 12. Code review in the agent era (Diffs)
+- 13. Teaching agents to do the work (2026)
 - Suggested reading order
 
 ---
@@ -123,6 +126,38 @@ Users describe symptoms or request familiar solutions; teams must infer the deep
 - Strategy dashboards: a handful of stable long-term trends for alignment. Operational dashboards: change, exceptions, action triggers.
 - Executive dashboards need more explanation; team dashboards can be denser.
 - A metric without comparison, history, or threshold is often useless (pair raw numbers with context like burn-up charts).
+
+## 11. The agent era: "Issue tracking is dead" (2026)
+**Best for:** product strategy in the agent era, context over handoffs
+🔗 https://linear.app/next (Mar 24, 2026)
+
+Linear's public reframing of its own thesis. The argument: issue trackers were built for **handoffs** (a PM scopes work, an engineer executes later) — overhead that made sense when engineering time was scarce. As agents absorb procedural work, the bottleneck moves to **context**, so the system's job is to turn captured context into execution: "Linear is the shared product system that turns context into execution." Stated adoption: coding agents in **75%+ of enterprise workspaces**, agent-completed work up **5x in three months**, agents authoring **~25% of new issues**.
+
+- The next system is designed around **context and agents**, not handoffs.
+- Capture customer feedback, internal ideas, strategic direction, decisions, and code in one place both humans and agents can use.
+- Planning, implementation, and review compress; humans move up to intent, judgment, and taste.
+
+## 12. Code review in the agent era (Diffs)
+**Best for:** AI/agent review surfaces, human accountability
+🔗 https://linear.app/now/reviewing-code-in-the-agent-era (Jun 10, 2026) · also https://linear.app/now/code-review-should-be-fast (May 28, 2026) and the review half of https://linear.app/now/coding-sessions-for-linear-agent — these describe the same **Diffs** feature; read as one.
+
+When agents generate large volumes of code, review can't stay line-by-line syntax checking. Linear's stance: "quality code review has come to mean that the code is **useful**, not just correct." Diffs embeds review inside Linear next to the product context, and structures changes "into chunks that read like a story" (narrative diffs) so reviewers follow logic instead of drowning in volume.
+
+- The reviewer's job elevates from code parser to **product thinker**: edge cases, UX implications, whether the change matters to users.
+- Agents handle correctness/bug-finding; humans stay the gate on usefulness and intent.
+- Keep review discussion among people — it reinforces engineering culture and accountability.
+
+## 13. Teaching agents to do the work (2026)
+**Best for:** agentic workflow design, gradual autonomy, accountability
+🔗 https://linear.app/now/code-intelligence-for-linear-agent (May 14) · https://linear.app/now/coding-sessions-for-linear-agent (Jun 11) · https://linear.app/now/linear-agent-bug-fix (Jun 12)
+
+How Linear ships its own agent capabilities: Code Intelligence (the agent reads the codebase and answers from source), Coding Sessions (it takes an issue through to a reviewed solution), and bug auto-fix (some bugs get fixed before an engineer picks them up). The throughline is **gradual autonomy with verification** and keeping a human accountable.
+
+- Embed agents where work lives (triage, the issue) and let work **auto-start** from existing signals.
+- Make agent runs **observable and shared**; gate autonomy on confidence, not all-or-nothing.
+- The issue stays assigned to a person — "an agent cannot be held accountable."
+
+> **Sourcing note:** these 2026 posts are product-launch announcements as much as craft essays — candid but promotional, and partly aspirational about adoption. Treat the principles as durable; treat specific feature names and stats as point-in-time.
 
 ---
 
