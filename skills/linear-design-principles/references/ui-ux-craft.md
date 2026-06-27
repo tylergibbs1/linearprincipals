@@ -172,3 +172,18 @@ How Linear ships its own agent capabilities: Code Intelligence (the agent reads 
 8. Building what customers need
 9. Dashboards best practices
 10. Why is quality so rare?
+
+---
+
+## Beyond Linear: two craft topics Linear under-documents
+
+Everything above is Linear's own writing. Two craft areas the Linear posts barely touch — worth reading from peers:
+
+### Motion as a communication channel (not only something to suppress)
+Linear's single animation lesson is "make the hover fade invisible over ~150ms" — restraint, i.e. how *not* to animate. That's half the story. Airbnb and Cultured Code treat motion as a designed, owned *artifact* that **communicates**: state changes, spatial continuity, and where something came from or went. Airbnb built and open-sourced **Lottie** so designers' After Effects motion ships pixel-faithfully into production rather than being re-approximated in code; Things uses physics-y "flocking" motion when dragging multiple items so the interaction reads as physical.
+- The test for a flourish: does it *communicate* (mark a real state change or spatial relationship) or merely decorate? On a high-frequency work surface, most motion should be invisible (Linear's instinct); at milestones and on consumer/personal apps, expressive motion earns its place. See `boundaries-and-peers.md`, #8.
+- 🔗 https://medium.com/airbnb-engineering/introducing-lottie-4ff4a0afac0e · https://medium.com/@jordanborth/an-ode-to-cultured-code-and-things-3-292e20112624
+
+### Context engineering: the model's context window as a finite resource
+Linear's agent-era posts use "context" to mean *organizational* context (decisions, the "why," code in one place — SKILL.md principle 11). When you actually build an agent feature, there's a second, literal meaning: the LLM's **context window**, which has diminishing returns and "context rot." Anthropic's guidance: retrieve just-in-time instead of front-loading everything, compact the history as you approach the limit, and isolate sub-agents so they hand back distilled summaries rather than raw transcripts. Pairs with the agent-computer-interface and evals points in SKILL.md principle 8.
+- 🔗 https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents · https://www.anthropic.com/engineering/writing-tools-for-agents

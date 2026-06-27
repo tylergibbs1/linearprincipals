@@ -35,6 +35,8 @@ The blog posts in `ui-ux-craft.md` are the output. This is the input: the org st
 - Success metric for craft is qualitative: Linear coming up organically in conversations about quality.
 - **Decide and move on.** There isn't always a best answer; sometimes the most important thing is to make a decision.
 
+> **Boundary — when metrics legitimately decide.** Linear's taste-over-data stance is safest *once you already have conviction and a deterministic, hand-reviewable surface.* It is most dangerous in four cases where peers rely on data: **pre-PMF** (Superhuman's 40% "very disappointed" survey was the central instrument for finding fit), **at the strategic "is anyone actually adopting this?" altitude** (The Browser Company wound down Arc partly on adoption telemetry, having trusted vision over signal for a long time), **when many stakeholders must align on priority** (Intercom's RICE), and **for non-deterministic features you can't eyeball** (agent evals — see SKILL.md principle 8). "Taste tells you if it's good; metrics tell you if it's being adopted," and those can diverge for years. Full treatment in `boundaries-and-peers.md`, #2.
+
 ## Opinionated software and plain language
 
 - Jori Lallo (co-founder): design so there's **one really good way of doing things**. Flexible software lets everyone invent their own workflows, which creates chaos as teams scale.
@@ -67,6 +69,17 @@ Linear's "feel" is mostly a backend bet made before the product existed.
 - **Every project has a named owner** responsible for the brief and delivery.
 - Momentum over burnout: aim for a steady speed sustainable next month and next year, not exhaustion bursts.
 - Build a tiny version quickly; the market tells you fast if it works. Endless data collection and testing usually signals you don't know what to do.
+
+### Alternative cadence: Shape Up (Basecamp) — what the Linear Method lacks
+🔗 https://basecamp.com/shapeup
+
+The Linear Method is one cadence, not the only one. Basecamp's Shape Up is the strongest peer alternative, and it has three ideas Linear's cycles don't:
+
+- **Appetite, not estimates.** Fix the time budget first (a "small batch" ~1–2 weeks or a "big batch" ~6 weeks), then *shape scope down to fit it*. This is the inverse of estimating ("how long will this take?") — you ask "how much is this worth?" and design to that ceiling.
+- **No backlog at all.** Linear "deletes the backlog" as hygiene; 37signals questions whether it should exist. Important ideas resurface; the rest were never going to ship. Each cycle, you *bet* on a few shaped pitches from scratch.
+- **Cooldown + circuit breaker.** Schedule slack (a ~2-week cooldown between cycles for bugs, exploration, and recovery). And if a project misses its appetite, it **stops by default** rather than getting an extension — the team has to re-pitch and re-earn a slot. This kills the "just one more week" death spiral.
+
+**When to reach for which:** Linear's short continuous cycles + curated near-term backlog + always-assigned owners suit high-frequency iterative work where momentum and visible ownership matter. Shape Up suits teams that want long, uninterrupted, protected focus and reject the obligation of an ever-growing list. (See `boundaries-and-peers.md`, #3.)
 
 ## Hiring and culture
 

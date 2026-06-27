@@ -29,7 +29,7 @@ ln -s "$PWD/linearprincipals/skills/linear-design-principles" \
 
 ### [linear-design-principles](skills/linear-design-principles/SKILL.md)
 
-**Design and review like Linear.** Eleven core principles — opinionated defaults, calm-but-dense hierarchy, speed as architecture, quality as a trained habit, and designing for shared context in the agent era — plus a copy-paste review checklist, the operating model behind them, and references to the source material.
+**Design and review like Linear.** Twelve core principles — opinionated defaults, calm-but-dense hierarchy, speed as architecture, quality as a trained habit, reversible-by-default actions, and designing for shared context in the agent era — plus a copy-paste review checklist, the operating model behind them, and references to the source material. **Linear-spine, peer-aware:** where Linear's opinions have limits, the skill names the boundary and which peer answer applies (Notion, Stripe, Basecamp, Apple, Vercel, Superhuman, The Browser Company).
 
 | You'll learn | From |
 |---|---|
@@ -42,7 +42,9 @@ ln -s "$PWD/linearprincipals/skills/linear-design-principles" \
 | Interpret requests, don't transcribe them | "Building what customers need" |
 | Redesign strategy and paying down design debt | "A design reset" + "How we redesigned the Linear UI" |
 | Design for shared context, not handoffs, in the agent era | "Issue tracking is dead" + "Reviewing code in the agent era" |
+| Make actions reversible — forgiveness is what lets people move fast | Apple HIG + Dieter Rams |
 | No handoffs, taste over experiments, the Linear Method | Lenny's Newsletter Q&A + linear.app/method |
+| Where Linear's opinions break — and which peer is right instead | Notion, Stripe, Basecamp Shape Up, Apple HIG, Vercel |
 
 ### How this differs from visual-craft skills
 
@@ -76,6 +78,11 @@ The skill follows the [Agent Skills spec](https://platform.claude.com/docs/en/ag
 skills/<skill-name>/
 ├── SKILL.md           # Main instructions (loaded when triggered)
 ├── references/        # Detailed guides (loaded on demand)
+│   ├── ui-ux-craft.md              # Linear's craft blog posts (+ peer addenda)
+│   ├── operating-model.md          # How Linear operates (+ Shape Up cadence)
+│   ├── boundaries-and-peers.md     # Where the principles have limits
+│   ├── accessibility-and-craft-specs.md  # The checkable craft layer
+│   └── sources.md                  # Primary + peer sources, with caveats
 └── evals/
     └── evals.json     # Evaluation tasks
 ```
@@ -102,6 +109,17 @@ This skill distills guidance from Linear's own writing and the people who built 
 - [How Linear builds product](https://www.lennysnewsletter.com/p/how-linear-builds-product) — Lenny's Newsletter
 - [How's Linear so fast? A technical breakdown](https://performance.dev/how-is-linear-so-fast-a-technical-breakdown) — performance.dev
 - [Skill authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices) — Anthropic
+
+And peer companies, used to test where Linear's principles generalize, break, or are independently confirmed:
+
+- [Ten principles for good design](https://www.vitsoe.com/us/about/good-design) — Dieter Rams / Vitsœ
+- [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/design-principles) — Apple
+- [Shape Up](https://basecamp.com/shapeup) — Basecamp / 37signals
+- [Designing APIs for humans: error messages](https://dev.to/stripe/designing-apis-for-humans-error-messages-94p) — Stripe
+- [Web Interface Guidelines](https://vercel.com/design/guidelines) — Vercel
+- [Why Superhuman is built for speed](https://blog.superhuman.com/superhuman-is-built-for-speed/) — Superhuman
+- [Building effective agents](https://www.anthropic.com/research/building-effective-agents) — Anthropic
+- [Letter to Arc members](https://browsercompany.substack.com/p/letter-to-arc-members-2025) — The Browser Company
 
 Full source list with caveats: [`skills/linear-design-principles/references/sources.md`](skills/linear-design-principles/references/sources.md).
 

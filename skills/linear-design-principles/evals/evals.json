@@ -164,6 +164,91 @@
         "At most offers a light pointer (e.g. test against real/empty states) without re-litigating the product decision",
         "Does NOT re-open problem framing, opinionation, or 'is this the right problem' for an approved spec"
       ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "We added optimistic updates so everything feels instant. A teammate worried that when a save silently fails, the user thinks it worked. How should we handle this?",
+      "files": [],
+      "expected_behavior": [
+        "Surfaces reversibility/undo and the failure/rollback state as first-class, not an edge case",
+        "Notes that optimistic local writes make recovery MORE important, not less — removing spinners is only half of feedback",
+        "Recommends designing a clear, recoverable rollback/reconciliation state when the write fails",
+        "May prefer undo over confirmation dialogs for routine actions",
+        "Does NOT just suggest adding a retry spinner or treating it as a backend-only concern"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "We're building a no-code workspace where every team models their own data and views. Should we ship one opinionated workflow like Linear?",
+      "files": [],
+      "expected_behavior": [
+        "Recognizes this is a platform/creative substrate with unknowably diverse users, where one-good-way would exclude most of the audience",
+        "Identifies the deciding variable: how knowable/homogeneous the user's job is, and shared vs. personal artifact",
+        "Recommends flexibility WITH a counterweight (templates, guided first-run, system/governance) — not raw blank-canvas flexibility",
+        "Does NOT blindly apply 'be opinionated, ship one way, say no' as universal law",
+        "May reference the boundary between Linear's lane and platforms (Notion/Raycast/Figma)"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "Our AI triage agent sometimes mislabels issues. We usually just dogfood and trust our taste — is that enough here?",
+      "files": [],
+      "expected_behavior": [
+        "Distinguishes deterministic UI (taste/dogfooding fine) from stochastic agents (need systematic evals)",
+        "Recommends eval task suites, regression checks, and production-trace observability as the actual quality signal",
+        "Frames evals as the one place 'taste over metrics' must bend — not as bureaucracy",
+        "Ties back to keeping a human accountable and a structured workbench",
+        "Does NOT claim dogfooding/taste alone is sufficient for a non-deterministic feature"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "We're exposing our app to coding agents via an API. We'll just wrap our existing REST endpoints. Anything to consider?",
+      "files": [],
+      "expected_behavior": [
+        "Treats the agent as a user you design for — the API/tools/schemas are a design surface",
+        "Recommends a few high-leverage tools over thin wrappers around every endpoint",
+        "Suggests human-readable fields over opaque IDs, namespacing, response-verbosity controls, prompt-engineered descriptions",
+        "Notes errors should teach the next step, and docs are part of the interface",
+        "May mention gating consequential/irreversible actions and context-window budgeting",
+        "Does NOT treat a thin 1:1 REST wrapper as sufficient"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "To stand out, we're replacing standard navigation with a brand-new spatial canvas and our own keyboard language. It tests great with power users. Ship it broadly?",
+      "files": [],
+      "expected_behavior": [
+        "Invokes the novelty tax — every unfamiliar concept charges a learning cost that must be repaid in benefit",
+        "Advises being distinctive only where payoff clearly exceeds the tax; for mainstream reach lean on familiar conventions ('a piano, not a saxophone')",
+        "Notes power-user love is not proof of mainstream fit",
+        "May cite Arc/The Browser Company as a cautionary case",
+        "Does NOT treat distinctiveness/novelty alone as a reason to ship broadly"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "Our team keeps a 600-item backlog and runs 1-week sprints but feels rushed and never has time to think. What process changes would help?",
+      "files": [],
+      "expected_behavior": [
+        "Offers both cadences honestly: Linear's curated-backlog/continuous-cycle hygiene vs. Shape Up's appetite + no-backlog + cooldown + circuit breaker",
+        "Introduces appetite as a scope-shaping constraint (fix the time, shape scope to fit — the inverse of estimating)",
+        "Suggests scheduled cooldown/slack and a circuit breaker (a project that misses its appetite stops by default)",
+        "Picks based on iteration frequency and how focus should be protected",
+        "Does NOT just say 'triage the backlog harder' or assume one method is universally correct"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "Our daily analytics dashboard feels sterile. We want to add celebratory confetti animations and sounds on every data refresh. Good idea?",
+      "files": [],
+      "expected_behavior": [
+        "Distinguishes high-frequency all-day work surfaces (calm wins; flourish becomes fatigue) from genuine milestone moments (delight can earn its place)",
+        "Flags that confetti on EVERY refresh fails the test — motion should communicate a real state change, not decorate routine actions",
+        "Allows that a single, deliberate peak moment might be warranted",
+        "May note motion as a communication channel and honoring prefers-reduced-motion",
+        "Does NOT reflexively forbid all delight, nor endorse celebratory motion on every routine action"
+      ]
     }
   ]
 }
