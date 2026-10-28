@@ -133,4 +133,4 @@ Full source list with caveats: [`skills/linear-design-principles/references/sour
 
 ## License
 
-MIT
+[MIT](LICENSE)
